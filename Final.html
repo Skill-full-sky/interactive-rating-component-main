@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="" href="https://fonts.google.com/specimen/Overpass">
+    <link rel="stylesheet" href="style.css">
+    <title>Final</title>
+</head>
+<body>
+
+    <div>
+        <div id="fix">
+            <div>
+                <img src="./images/illustration-thank-you.svg" alt="">
+            </div>
+            
+            <div>
+                <h3 style="color: #996c46;">
+                    You selected <span id="selectedRating"> <!-- Add rating here --> </span> out of 5
+                </h3>
+            </div>
+    
+            <div>
+                <h2 style="color: #f8fbfa;">Thank you!</h2>
+            </div>
+    
+            <div>
+                <p style="color: #7c8898;">We appreciate you taking the time to give a rating. If you ever need more support, 
+                    don't hesitate to get in touch!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Retrieve the selected rating from local storage
+        const selectedRating = localStorage.getItem('selectedRating');
+        const selectedRatingElement = document.getElementById('selectedRating');
+
+        if (selectedRating) {
+            selectedRatingElement.textContent = selectedRating;
+        }
+    </script>
+</body>
+</html>

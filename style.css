@@ -1,0 +1,93 @@
+@font-face{
+    font-family: "Overpass" sans-serif;
+    src: url(https://fonts.google.com/specimen/Overpass);
+}
+
+body{
+    background-color: #141519;
+  }
+.rating-box{
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    height: 270px;
+    width: 270px;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 20px;
+    background-color: #1f2630;
+    
+}
+
+
+
+button{
+    position: relative;
+    border-radius: 200%;
+    border: none;
+    margin: 1px;
+    padding: 15px;
+}
+button:hover{
+    position: relative;
+    
+    background-color:  #7c8898;
+    color: white;
+    cursor: pointer;
+    transition: 0.7s;
+    
+}
+button:focus{
+    background-color: #f87817;
+   
+}
+
+#sub{
+    color: orange;
+    
+}
+#sub:hover{
+    position: relative;
+    background-color:  #f87817;
+    color: rgb(243, 238, 238);
+    cursor: pointer;
+    transition: 0.7s;
+    
+}
+
+#fix {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 270px;
+    width: 270px;
+    margin: auto;
+    margin-top: 20%;
+    border-radius: 10px;
+    background-color: #1f2630;
+    
+}
+/* New styles for the attribution */
+footer.attribution {
+    background-color: #141519
+    ;
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+    font-size: 14px;
+    color: #fdfafa;
+  }
+
+  footer.attribution a {
+    color: #a14d4d;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer.attribution a:hover {
+    color: #000;
+  }
+
+

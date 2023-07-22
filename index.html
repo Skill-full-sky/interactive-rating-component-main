@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Overpass">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: #141519;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div>
+      <div class="rating-box">
+        <div> <img src="./images/icon-star.svg" alt="" style="border-radius: 150%; background-color: #242f3c; padding: 9px;">
+        </div>
+        
+        <div>
+          <div>
+            <h2 style="color: white;">How did we do?</h2>
+          </div>
+          
+          <div>
+            <p style="color: #888f99;">Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!</p>
+          </div>
+        </div>
+        
+          <div class="float-container" >
+            <div class="float-child" style="margin-left: 12px;">
+              <button id="rate-1" class="rating-button">1</button>
+              <button id="rate-2" class="rating-button">2</button>
+              <button id="rate-3" class="rating-button">3</button>
+              <button id="rate-4" class="rating-button">4</button>
+              <button id="rate-5" class="rating-button">5</button>
+            </div>
+            <div id="submit" class="float-child" >
+              <a href="Final.html"><button id="sub" style="margin-bottom: 10px;
+                font-size: 14px;
+                line-height: 5px;
+                margin: 10px; 
+                padding: 12px;
+                width: 90%;  
+                border-radius: 50px; 
+                 
+                "><strong>Submit</strong></button></a>
+            </div>
+          </div>
+         
+        
+      </div>
+  
+      
+      
+    </div>
+    
+  </div>
+ <!-- ... (previous code) ... -->
+
+<script>
+  const ratingButtons = document.querySelectorAll('.rating-button');
+
+  function highlightButtons(selectedRating) {
+    ratingButtons.forEach((button) => {
+      const rating = parseInt(button.textContent);
+      button.style.backgroundColor = rating <= selectedRating ? '#f87817' : '#1f2630';
+    });
+
+    // Store the selected rating in local storage
+    localStorage.setItem('selectedRating', selectedRating);
+  }
+
+  ratingButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selectedRating = parseInt(button.textContent);
+      highlightButtons(selectedRating);
+    });
+  });
+</script>
+
+<!-- ... (rest of the code) ... -->
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Skill_full_sky</a>.
+  </footer>
+</body>
+</html>
